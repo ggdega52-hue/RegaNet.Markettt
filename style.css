@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+
+    background: linear-gradient(300deg, #FF059A, #10C6FF, #FF059A);
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    animation: gradientAnimation 12s ease infinite;
+}
+
+/* Анимация градиента */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Контейнер */
+.card-container {
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    animation: slideInDown 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+/* Фото */
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 1);
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+
+/* Текст */
+h1 {
+    color: #FFFFFF;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+p {
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Кнопки */
+.buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    color: #5d5454;
+    font-weight: 700;
+    padding: 15px 30px;
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 8px 20px rgba(238, 156, 167, 0.3);
+    color: #FF8597;
+}
+
+/* Цвета */
+.tiktok:hover { color: #000; }
+.telegram:hover { color: #0088cc; }
+
+/* Анимация */
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптив */
+@media (max-width: 480px) {
+    .profile-photo {
+        width: 160px;
+        height: 160px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+.overlay-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('оо.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    pointer-events: none;
+    z-index: 9999;
+
+    /* 👇 ВАЖНО */
+    opacity: 0;
+    animation: slideInDown 1.2s ease-out forwards;
+}
