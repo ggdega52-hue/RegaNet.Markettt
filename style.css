@@ -141,3 +141,41 @@ p {
     opacity: 0;
     animation: slideInDown 1.2s ease-out forwards;
 }
+
+/* --- Стили для переключателя языков --- */
+.lang-switcher {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10000; /* Чтобы кнопки были поверх фона overlay */
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.55);
+}
+
+/* Активная кнопка языка (чтобы было видно, какой выбран) */
+.lang-btn.active {
+    background: rgba(255, 255, 255, 0.8);
+    color: #FF059A;
+    border-color: #FF059A;
+}

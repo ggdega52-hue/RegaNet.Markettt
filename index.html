@@ -5,39 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Навигация</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="uk">UK</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
     <div class="overlay-background"></div>
 
     <div class="card-container">
         
-        <img src="2.jpg" class="profile-photo">
+        <img src="2.jpg" class="profile-photo" alt="Rega">
 
         <h1>Rega</h1>
-        <p>Веб / дизайн / монтаж
-        <br>
-            Заказать сайт, превью или монтаж можно ниже 👇</p>
+        <p>
+            <span data-i18n="about">Веб / дизайн / монтаж</span>
+            <br>
+            <span data-i18n="order_text">Заказать сайт, превью или монтаж можно ниже 👇</span>
+        </p>
 
         <div class="buttons-wrapper">
             <a href="https://www.tiktok.com/@rega22525?_r=1&_t=ZS-93MkCzXWfCC" class="btn tiktok">
-                <span>🎵 TikTok</span>
+                <span data-i18n="tiktok">📱 TikTok</span>
+            </a>
+             <a href="2index.html" class="btn telegram">
+                <span data-i18n="order_btn">🚀 Заказать проект</span>
             </a>
             <a href="https://t.me/cutzon1" class="btn telegram">
-                <span>✈️ Телеграм Канал</span>
+                <span data-i18n="portfolio_video">Портфолио Монтаж</span>
             </a>
-            <a href="2index.html" class="btn telegram">
-                <span>🚀 Заказать проект </span></span>
+            <a href="#" class="btn telegram">
+                <span data-i18n="portfolio_web">Портфолио Веб-сайты</span>
+            </a>
+             <a href="#" class="btn telegram">
+                <span data-i18n="portfolio_design">Портфолио дизайн-превью</span>
             </a>
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
-
