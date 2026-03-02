@@ -9,73 +9,155 @@
 <body>
 
 <div class="container">
+    <div class="language-selector">
+        <button onclick="changeLanguage('ru')" class="lang-btn active" id="btn-ru">RU</button>
+        <button onclick="changeLanguage('ua')" class="lang-btn" id="btn-ua">UA</button>
+        <button onclick="changeLanguage('en')" class="lang-btn" id="btn-en">EN</button>
+    </div>
+
     <section class="steps">
-        <h2>Как сделать заказ?</h2>
-        <p>1. Выбери категорию покупки <br>
+        <h2 data-key="steps_title">Как сделать заказ?</h2>
+        <p data-key="steps_desc">1. Выбери категорию покупки <br>
            2. Нажми кнопку "Обсудить в Telegram".<br>
            3. Мы перейдем в Telegram, где обсудим детали заказа.</p>
     </section>
 
     <section class="catalog">
-
         <div class="card">
             <img src="3.jpg" alt="превью" class="card-img">
             <div class="card-body">
-                <div class="card-title">2D-3D Превью для YouTube</div>
-                <div class="card-price">300 – 800 грн</div>
-                <div class="card-desc">Помогаю твоему ролику выделиться в ленте. Постоянно учусь новым фишкам, поэтому вкладываюсь в каждый заказ на все 100%.
-                <br>
-<strong>Скидка:</strong> Если у тебя уже есть свои PNG или 3D модели -100грн</div>
+                <div class="card-title" data-key="card1_title">2D-3D Превью для YouTube</div>
+                <div class="card-price" data-key="card1_price">300 – 800 грн</div>
+                <div class="card-desc" data-key="card1_desc">Помогаю твоему ролику выделиться в ленте. Постоянно учусь новым фишкам, поэтому вкладываюсь в каждый заказ на все 100%.<br>
+                <strong>Скидка:</strong> Если у тебя уже есть свои PNG или 3D модели -100грн</div>
                 
-                <a href="https://t.me/Rega225?text=Привет!%20Я%20пишу%20с%20сайта.%20Хочу%20заказать%202D–3D%20превью%20для%20YouTube.%20Можем%20обсудить%20детали?" class="btn-order">
-                    Обсудить идею в Tг
-                </a>
+                <a href="#" id="tg-link-1" class="btn-order" data-key="btn_text">Обсудить идею в Tг</a>
             </div>
         </div>
 
         <div class="card">
             <img src="5.png" alt="Монтаж" class="card-img">
             <div class="card-body">
-                <div class="card-title">Монтаж видео (TikTok-Shorts & Длинные видео)</div>
-                <div class="card-price">150 - 800грн</div>
-                <div class="card-desc">Сделаю аккуратную склейку, добавлю субтитры и переходы. Берусь за Shorts, Reels или полноценные ролики.
-                <br>
- <strong>От меня:</strong> Ответственный подход и желание сделать так, чтобы тебе понравилось. Всегда открыт к правкам и твоим идеям!</div>
+                <div class="card-title" data-key="card2_title">Монтаж видео (TikTok-Shorts & Длинные видео)</div>
+                <div class="card-price" data-key="card2_price">150 - 800грн</div>
+                <div class="card-desc" data-key="card2_desc">Сделаю аккуратную склейку, добавлю субтитры и переходы. Берусь за Shorts, Reels или полноценные ролики.<br>
+                <strong>От меня:</strong> Ответственный подход и желание сделать так, чтобы тебе понравилось. Всегда открыт к правкам и твоим идеям!</div>
                 
-                <a href="https://t.me/Rega225?text=Привет!%20Перешёл%20с%20сайта.%20Интересует%20монтаж%20видео%20(Shorts%20/%20TikTok%20или%20длинное%20видео).%20Хочу%20обсудить%20заказ." class="btn-order">
-                 Обсудить идею в Tг                    
-                </a>
+                <a href="#" id="tg-link-2" class="btn-order" data-key="btn_text">Обсудить идею в Tг</a>
             </div>
         </div>
 
-      <div class="card">
+        <div class="card">
             <img src="6.png" alt="Индивидуальный заказ" class="card-img">
             <div class="card-body">
-                <div class="card-title">Разработка простых Сайтов</div>
-                <div class="card-price">от 500 грн (зависит от задачи)</div>
-                <div class="card-desc">Соберу для тебя симпатичный сайт-портфолио или страницу с кнопками-ссылками.
-                <br>
-<strong>Цены:</strong> * Простой сайт или навигация: 500 – 1000 грн.
-​Что-то посложнее: обсудим индивидуально.
-<br>
-<strong>Важно: </strong>Я только набиваю руку в вебе, поэтому цены пока максимально дружелюбные!
-                </div>
+                <div class="card-title" data-key="card3_title">Разработка простых Сайтов</div>
+                <div class="card-price" data-key="card3_price">от 500 грн (зависит от задачи)</div>
+                <div class="card-desc" data-key="card3_desc">Соберу для тебя симпатичный сайт-портфолио или страницу с кнопками-ссылками.<br>
+                <strong>Цены:</strong> * Простой сайт или навигация: 500 – 1000 грн. Что-то посложнее: обсудим индивидуально.<br>
+                <strong>Важно: </strong>Я только набиваю руку в вебе, поэтому цены пока максимально дружелюбные!</div>
                 
-                <a href="https://t.me/Rega225?text=Здравствуйте!%20Пишу%20с%20сайта.%20Интересует%20разработка%20простого%20сайта.%20Хотел(а)%20бы%20обсудить%20задачу%20и%20цену." class="btn-order">
-                    Обсудить идею в Tг 
-                </a>
+                <a href="#" id="tg-link-3" class="btn-order" data-key="btn_text">Обсудить идею в Tг</a>
             </div>
         </div>
-
     </section>
 
     <footer>
-        <p>© 2026 Сделаю всё, как душе угодно<br> 
-        <a href="https://www.tiktok.com/@rega22525?_r=1&_t=ZS-93MkCzXWfCC">Мой Тик ток</a>
+        <p><span data-key="footer_text">© 2026 Сделаю всё, как душе угодно</span><br> 
+        <a href="https://www.tiktok.com/@rega22525?_r=1&_t=ZS-93MkCzXWfCC" data-key="footer_link">Мой Тик ток</a>
         </p>
     </footer>
 
 </div>
+
+<script>
+    const langData = {
+        'ru': {
+            'steps_title': 'Как сделать заказ?',
+            'steps_desc': '1. Выбери категорию покупки <br> 2. Нажми кнопку "Обсудить в Telegram".<br> 3. Мы перейдем в Telegram, где обсудим детали заказа.',
+            'card1_title': '2D-3D Превью для YouTube',
+            'card1_price': '300 – 800 грн',
+            'card1_desc': 'Помогаю твоему ролику выделиться в ленте. Постоянно учусь новым фишкам, поэтому вкладываюсь в каждый заказ на все 100%.<br><strong>Скидка:</strong> Если у тебя уже есть свои PNG или 3D модели -100грн',
+            'card2_title': 'Монтаж видео (TikTok-Shorts & Длинные видео)',
+            'card2_price': '150 - 800грн',
+            'card2_desc': 'Сделаю аккуратную склейку, добавлю субтитры и переходы. Берусь за Shorts, Reels или полноценные ролики.<br><strong>От меня:</strong> Ответственный подход и желание сделать так, чтобы тебе понравилось. Всегда открыт к правкам и твоим идеям!',
+            'card3_title': 'Разработка простых Сайтов',
+            'card3_price': 'от 500 грн (зависит от задачи)',
+            'card3_desc': 'Соберу для тебя симпатичный сайт-портфолио или страницу с кнопками-ссылками.<br><strong>Цены:</strong> * Простой сайт или навигация: 500 – 1000 грн. Что-то посложнее: обсудим индивидуально.<br><strong>Важно: </strong>Я только набиваю руку в вебе, поэтому цены пока максимально дружелюбные!',
+            'btn_text': 'Обсудить идею в Tг',
+            'footer_text': '© 2026 Сделаю всё, как душе угодно',
+            'footer_link': 'Мой Тик ток',
+            'tg_msg1': 'Привет! Я пишу с сайта. Хочу заказать 2D–3D превью для YouTube. Можем обсудить детали?',
+            'tg_msg2': 'Привет! Перешёл с сайта. Интересует монтаж видео (Shorts / TikTok или длинное видео). Хочу обсудить заказ.',
+            'tg_msg3': 'Здравствуйте! Пишу с сайта. Интересует разработка простого сайта. Хотел(а) бы обсудить задачу и цену.'
+        },
+        'ua': {
+            'steps_title': 'Як зробити замовлення?',
+            'steps_desc': '1. Обери категорію покупки <br> 2. Натисни кнопку "Обговорити в Telegram".<br> 3. Ми перейдемо в Telegram, де обговоримо деталі замовлення.',
+            'card1_title': '2D-3D Превью для YouTube',
+            'card1_price': '300 – 800 грн',
+            'card1_desc': 'Допомагаю твоєму ролику виділитися в стрічці. Постійно вчуся новим фішкам, тому вкладаюся в кожне замовлення на всі 100%.<br><strong>Знижка:</strong> Якщо у тебе вже є свої PNG або 3D моделі -100грн',
+            'card2_title': 'Монтаж відео (TikTok-Shorts & Довгі відео)',
+            'card2_price': '150 - 800грн',
+            'card2_desc': 'Зроблю акуратну склейку, додам субтитри та переходи. Беруся за Shorts, Reels або повноцінні ролики.<br><strong>Від мене:</strong> Відповідальний підхід та бажання зробити так, щоб тобі сподобалося. Завжди відкритий до правок та твоїх ідей!',
+            'card3_title': 'Розробка простих Сайтів',
+            'card3_price': 'від 500 грн (залежить від завдання)',
+            'card3_desc': 'Зберу для тебе симпатичний сайт-портфоліо або сторінку з кнопками-посиланнями.<br><strong>Ціни:</strong> * Простий сайт або навігація: 500 – 1000 грн. Щось складніше: обговоримо індивідуально.<br><strong>Важливо: </strong>Я тільки набиваю руку у вебі, тому ціни поки максимально дружні!',
+            'btn_text': 'Обговорити ідею в Tг',
+            'footer_text': '© 2026 Зроблю все, як забажаєте',
+            'footer_link': 'Мій Тік ток',
+            'tg_msg1': 'Привіт! Я пишу з сайту. Хочу замовити 2D–3D прев’ю для YouTube. Можемо обговорити деталі?',
+            'tg_msg2': 'Привіт! Перейшов з сайту. Цікавить монтаж відео (Shorts / TikTok або довге відео). Хочу обговорити замовлення.',
+            'tg_msg3': 'Добрий день! Пишу з сайту. Цікавить розробка простого сайту. Хотів(ла) би обговорити завдання та ціну.'
+        },
+        'en': {
+            'steps_title': 'How to order?',
+            'steps_desc': '1. Choose a category <br> 2. Click "Discuss in Telegram" button.<br> 3. We will go to Telegram to discuss the details.',
+            'card1_title': '2D-3D YouTube Thumbnails',
+            'card1_price': '300 – 800 UAH',
+            'card1_desc': 'Helping your video stand out in the feed. Constantly learning new tricks to give 100% to every order.<br><strong>Discount:</strong> If you already have your own PNG or 3D models -100 UAH',
+            'card2_title': 'Video Editing (TikTok/Shorts & Long videos)',
+            'card2_price': '150 - 800 UAH',
+            'card2_desc': 'Clean cuts, subtitles, and transitions. I take on Shorts, Reels, or full-length videos.<br><strong>From me:</strong> Responsible approach and a desire to make you happy with the result. Always open to edits!',
+            'card3_title': 'Simple Website Development',
+            'card3_price': 'from 500 UAH (depends on task)',
+            'card3_desc': 'I will build a nice portfolio site or a landing page with link buttons for you.<br><strong>Prices:</strong> * Simple site: 500 – 1000 UAH. Something complex: discussed individually.<br><strong>Note: </strong>I am just starting in web dev, so the prices are very friendly!',
+            'btn_text': 'Discuss idea in TG',
+            'footer_text': '© 2026 I will do everything as you wish',
+            'footer_link': 'My Tik Tok',
+            'tg_msg1': 'Hello! Contacting you from the website. I want to order a 2D-3D YouTube thumbnail. Can we discuss?',
+            'tg_msg2': 'Hi! Coming from your site. Interested in video editing (Shorts/TikTok or long video). Let’s discuss.',
+            'tg_msg3': 'Hello! Writing from the website. Interested in simple website development. I’d like to discuss the task and price.'
+        }
+    };
+
+    function changeLanguage(lang) {
+        // Меняем текст элементов по ключу
+        document.querySelectorAll('[data-key]').forEach(element => {
+            const key = element.getAttribute('data-key');
+            if (langData[lang][key]) {
+                element.innerHTML = langData[lang][key];
+            }
+        });
+
+        // Обновляем ссылки Telegram
+        document.getElementById('tg-link-1').href = `https://t.me/Rega225?text=${encodeURIComponent(langData[lang]['tg_msg1'])}`;
+        document.getElementById('tg-link-2').href = `https://t.me/Rega225?text=${encodeURIComponent(langData[lang]['tg_msg2'])}`;
+        document.getElementById('tg-link-3').href = `https://t.me/Rega225?text=${encodeURIComponent(langData[lang]['tg_msg3'])}`;
+
+        // Подсветка активной кнопки
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        document.getElementById(`btn-${lang}`).classList.add('active');
+        
+        // Сохраняем выбор в браузере
+        localStorage.setItem('preferredLang', lang);
+    }
+
+    // Инициализация при загрузке
+    window.onload = () => {
+        const savedLang = localStorage.getItem('preferredLang') || 'ru';
+        changeLanguage(savedLang);
+    };
+</script>
 
 </body>
 </html>

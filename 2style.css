@@ -110,3 +110,34 @@ footer {
 footer a {
     color: #d63384;
 }
+
+/* --- СТИЛИ ДЛЯ ПЕРЕКЛЮЧАТЕЛЯ ЯЗЫКОВ --- */
+.language-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.lang-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.lang-btn.active {
+    background: #d63384;
+    color: white;
+    box-shadow: 0 0 10px rgba(214, 51, 132, 0.5);
+}
